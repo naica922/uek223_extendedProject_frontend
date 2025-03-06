@@ -21,7 +21,7 @@ jobs:
         with:
           context: ./react_frontend/.
           push: true
-          tags: naica922/app:latest
+          tags: naica922/uek223_extended_frontend:latest
 
       - name: Executing remote SSH commands using password
         uses: appleboy/ssh-action@master
