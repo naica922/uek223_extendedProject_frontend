@@ -1,5 +1,5 @@
 # Will create a node environment in the container
-FROM node:22-alpine AS builder
+FROM node:20-alpine AS builder
 # Will create a directory app and switch to that directory
 WORKDIR /app
 # Copies package.json file and soruce code to /app directory
