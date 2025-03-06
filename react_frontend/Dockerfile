@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 # Will create a directory app and switch to that directory
 WORKDIR /app
 # Copies package.json file and soruce code to /app directory
-COPY ./package.json .
+COPY package.json .
 COPY .env.production .
 COPY ./public ./public
 COPY ./src ./src
