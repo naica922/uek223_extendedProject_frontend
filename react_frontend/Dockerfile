@@ -4,7 +4,7 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 # Copies package.json file and soruce code to /app directory
 COPY ./package.json .
-COPY ./env.production .
+COPY .env.production .
 COPY ./public ./public
 COPY ./src ./src
 # Runs npm install to create node_modules for your app
@@ -17,7 +17,7 @@ FROM nginx:alpine
 # Copy the production build from the builder stage to the nginx web server
 COPY --from=builder /app/build /usr/share/nginx/html
 # Copy config files
-COPY ./.env.production .
+COPY .env.production .
 RUN pwd
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # Expose port 80
