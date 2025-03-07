@@ -1,7 +1,7 @@
 name: frontend
 on: push
 jobs:
-  Script:
+  Project-Script:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
